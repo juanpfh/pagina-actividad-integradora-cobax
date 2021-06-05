@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página web AlexCG</title>
+    <link rel="shortcut icon" href="img/alexcgdesign.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/AI_EstiloPaginas.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Multimedia/ir_arriba/fonts.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+
+        $('.ir-arriba').click(function () {
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+    });
+</script>
+
+<body>
+    <span class="ir-arriba icon-chevrons-up"></span>
+    <header class="extra">
+        <nav>
+            <a href="#">Inicio</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Cobax</h1>
+            <h2>Estructura de la Plataforma</h2>
+        </section>
+    </header>
+    <main>
+        <section class="clientes contenedor">
+            <h2 class="titulo">Público Objetivo</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/imgEstudiante.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>Estudiantes</h4>
+                        <p>Adolescente de 15-18 años, graduada de secundaria y cursando el nivel medio superior, con
+                            medios de comunicación para tomar clase de forma remota de manera correcta.</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/imgDocente.jpg" alt="">
+                    <div class="contenido-texto-card">
+                        <h4>Docentes</h4>
+                        <p>Adulto de 25-60 años con conocimientos en materias relacionadas al nivel medio superior y con
+                            experiencia en enseñanza, con medios de comunicación para impartir clase de forma remota de
+                            manera correcta.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Diagrama: Casos de Uso</h2>
+                <div class="galeria-port">
+                    <div>
+                        <img src="../Multimedia/Imagenes/casosUsosCobax.jpg" alt="" width="700">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Interfáz de la Plataforma</h2>
+            <div class="contenedor-sobre-nosotros">
+                <table id="t02">
+                    <tr>
+                        <td>Nombre y Descripción</td>
+                        <td>Datos e Importancia</td>
+                        <td>Vista</td>
+                    </tr>
+                    <tr>
+                        <td>01. Inicio Sesión<br><br>Descripción:<br>
+                            En la parte inferior de la ventana aparecerá una opción que dirá ayuda, en el cual se abrirá
+                            un recuadro por si no entiende cómo interactuar con la ventana de inicio de sesión. En caso
+                            contrario el usuario entra a la ventana e inserta su usuario y su respectiva contraseña; si
+                            son correctos sus datos que inserto al dar click en la flecha que representa lo siguiente
+                            será redirigido a la ventana bienvenida. En caso de que haya olvidado su contraseña, puede
+                            dar click en la opción ¿Olvidó la contraseña? y después seguirá los pasos que se le indican
+                            para que se le envíe un correo y desde el enlace que se le hizo llegar poder entrar de
+                            nuevo.</td>
+                        <td>Datos de entrada:<br>
+                            Usuario<br>
+                            Contraseña<br>
+                            Datos de salida:<br>
+                            Ventana de bienvenida<br>
+                            Recuadro de recuperar contraseña<br>
+                            Recuadro de ayuda<br>
+                            <br>
+                            Importancia:<br> Alta<br>
+                            <br>
+                            Actores:<br> Usuarios<br> Sistema<br><br>
+                            Observaciones: <br>Los alumnos serán registrados por sus tutores por lo que es necesario que
+                            el alumno esté en contacto con su tutor para ser agregados al sistema.
+                        </td>
+                        <td><img src="../Multimedia/Imagenes/loginCobax.png" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td>02. Ventana Bienvenida<br><br>Descripción:<br>El usuario ingresa a la ventana de bienvenida
+                            en la cual encontrará 3 módulos los cuales son: materias, actividades, calificaciones,
+                            dependiendo lo que el alumno necesite ingresara a la ventana dando un click sobre el
+                            apartado o la imagen y será redirigido a cada ventana correspondiente.</td>
+                        <td>Datos de entrada:<br>
+                            Depende del módulo que selecciones el estudiante.<br>
+                            Datos de salida:<br>
+                            Ventana de materias<br>
+                            Ventana de actividades<br>
+                            Ventana de Calificaciones<br>
+                            <br>
+                            Importancia:<br> Alta<br>
+                            <br>
+                            Actores:<br> Usuarios<br> Sistema<br><br>
+                        </td>
+                        <td><img src="../Multimedia/Imagenes/inicioCobax.png" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td>03. Ventana Materia (cursos)<br><br>Descripción:<br>El usuario al ingresar a la ventana de
+                            materias se encontrará a sus 4 cursos que son cálculo, química, física e inglés y dando un
+                            click sobre el respectivo recuadro será redirigido a su respectiva ventana.</td>
+                        <td>Datos de entrada:<br>
+                            Depende del módulo que selecciones el estudiante.<br>
+                            Datos de salida:<br>
+                            Ventana de cálculo<br>
+                            Ventana de química<br>
+                            Ventana de física<br>
+                            Ventana de Inglés<br>
+                            <br>
+                            Importancia:<br> Alta<br>
+                            <br>
+                            Actores:<br> Usuarios<br> Sistema<br><br>
+                            Observaciones: <br>Se tendrá un recuadro para poder regresar a la ventana de bienvenida.
+                        </td>
+                        <td><img src="../Multimedia/Imagenes/materiasCobax.png" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td>04. Ventana Actividades (tarea, examen)<br><br>Descripción:<br>El alumno será redirigido a
+                            la
+                            ventana de sus actividades en el cual encontrará dos apartados los cuales son tarea y
+                            exámenes con un click sobre cada apartado podrá ingresar nuevamente a su respectiva ventana.
+                        </td>
+                        <td>Datos de entrada:<br>
+                            Depende del módulo que selecciones el estudiante.<br>
+                            Datos de salida:<br>
+                            Ventana de tarea<br>
+                            Ventana de examen<br>
+                            <br>
+                            Importancia:<br> Alta<br>
+                            <br>
+                            Actores:<br> Usuarios<br> Sistema<br><br>
+                        </td>
+                        <td><img src="../Multimedia/Imagenes/actividadesCobax.png" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td>05. Ventana Calificaciones (materia, parcial, final)<br><br>Descripción:<br>El alumno será
+                            redirigido a la ventana de calificaciones en el cual encontrará tres apartados materia,
+                            parcial, final y cada uno de ellos al dar click sobre su respectiva imágenes, el alumno
+                            podrá visualizar sus respectivas calificaciones que logró obtener a lo largo del ciclo
+                            escolar.</td>
+                        <td>Datos de entrada:<br>
+                            Depende del módulo que selecciones el estudiante<br>
+                            Datos de salida:<br>
+                            Ventana de materia<br>
+                            Ventana de final<br>
+                            Ventana de parcial<br>
+                            <br>
+                            Importancia:<br> Alta<br>
+                            <br>
+                            Actores:<br> Usuarios<br> Sistema<br><br>
+                        </td>
+                        <td><img src="../Multimedia/Imagenes/calificacionesCobax.png" width="300px"></td>
+                    </tr>
+                    <tr>
+                        <td>06. Ventana Asignatura<br><br>Descripción:<br>El alumno podrá ingrsar al apartado específico
+                            de cada materia, donde podrá consultar el material de estudio, al igual que podrá cumplir y
+                            dar un seguimiento de sus tareas y actividades (de dicha materia), consiguiendo así una
+                            aorganización entre sus asignaturas.</td>
+                        <td>Datos de entrada:<br>
+                            Depende del módulo que selecciones el estudiante<br>
+                            Datos de salida:<br>
+                            Ventana de tareas<br>
+                            Ventana de actividades<br>
+                            Ventana de material educativo<br>
+                            <br>
+                            Importancia:<br> Alta<br>
+                            <br>
+                            Actores:<br> Usuarios<br> Sistema<br><br>
+                        </td>
+                        </td>
+                        <td><img src="../Multimedia/Imagenes/calculoCobax.png" width="300px"></td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2 class="titulo-final">&copy; Cobax | Equipo #3 | 2°"A" I.C. | UATx</h2>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Cobax</title>
+	<link rel="icon" type="image/png" href="Multimedia/LogoBase.png" />
+	<link rel="stylesheet" href="CSS/AI_Estilo.css">
+	<link rel="stylesheet" href="Multimedia/Reproductor/fonts.css">
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<script>
+	function elecSrc(op) {
+		if (op == 1) {
+			document.getElementById('iframe_Registro').src = "pagHTML/AI_InicioSesion.html";
+		} else {
+			document.getElementById('iframe_Registro').src = "pagHTML/AI_Registro.html";
+		}
+	}
+	function iframeContSrc(op) {
+		switch (op) {
+			case 1:
+				document.getElementById('iframe_Contenido').src = "pagHTML/AI_Inicio.html";
+				break;
+			case 2:
+				document.getElementById('iframe_Contenido').src = "pagHTML/AI_EstructuraPlataforma.html";
+				break;
+			case 3:
+				document.getElementById('iframe_Contenido').src = "pagHTML/AI_Demostracion.html";
+				break;
+			case 4:
+				document.getElementById('iframe_Contenido').src = "pagHTML/AI_Contacto.html";
+				break;
+		}
+	}
+	/*let audioEtiqueta = document.querySelector("source");
+	function validaCheckbox() {
+		if (document.getElementById('switch').checked) {
+			audioEtiqueta.play();
+		} else {
+			etiquetaAudio.pause();
+		}
+	}
+	<pre>Audio</pre>
+					<input type="checkbox" id="switch" onclick="validaCheckbox()">
+					<label for="switch" class="lbl"></label>*/
+</script>
+
+<body>
+	<header class="header">
+		<div class="container">
+			<div class="btn-menu">
+				<label for="btn-menu">☰</label>
+			</div>
+			<div class="logo">
+				<img src="Multimedia/LogoCobax.gif" width="150px">
+			</div>
+			<nav class="menu">
+				<label class="a" onclick="iframeContSrc(1)">Inicio</label>
+				<label class="a" onclick="elecSrc(1)" for="btn-modal">Inicia Sesión</label>
+				<label class="a" onclick="elecSrc(2)" for="btn-modal">Regístrate</label>
+
+			</nav>
+		</div>
+	</header>
+	<div class="capa"></div>
+	<input type="checkbox" id="btn-modal">
+	<div class="modal">
+		<div class="contenedor">
+			<label for="btn-modal">✖️</label>
+			<div class="contenido">
+				<iframe src="pagHTML/AI_Registro.html" height="100%" width="100%" name="iframe_Registro"
+					id="iframe_Registro" style="border: none;"></iframe>
+			</div>
+		</div>
+	</div>
+	<!--	--------------->
+	<input type="checkbox" id="btn-menu">
+	<div class="container-menu">
+		<div class="cont-menu">
+			<nav>
+				<p id="ab" onclick="iframeContSrc(1)">Inicio</p>
+				<p id="ab" onclick="iframeContSrc(2)">Estructura de la plataforma</p>
+				<p id="ab" onclick="iframeContSrc(3)">Demostración</p>
+				<p id="ab" onclick="iframeContSrc(4)">Contáctanos</p>
+				<div id="ab" class="switch-container">
+					<audio src="Multimedia/Audio/audioCobaxF.mp3" loop></audio>
+					<section id="containerAudio">
+						<div id="controles">
+							<pre>Audio</pre>
+							<div class="max"><label class="Reproductor icon-play3" id="estado"></label></div>
+						</div>
+						<div id="barra">
+							<div id="progreso"></div>
+						</div>
+					</section>
+				</div>
+			</nav>
+			<label for="btn-menu">✖️</label>
+
+		</div>
+	</div>
+	<iframe src="pagHTML/AI_Inicio.html" height="500px" width="100%" name="iframe_Contenido" id="iframe_Contenido"
+		style="border: none;"></iframe>
+	<script type="text/javascript" src="JS/AI_Audio.js"></script>
+</body>
+
+</html>

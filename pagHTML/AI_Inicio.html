@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../CSS/AI_EstiloPaginas.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Multimedia/ir_arriba/fonts.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+
+        $('.ir-arriba').click(function () {
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+    });
+</script>
+
+<body>
+    <span class="ir-arriba icon-chevrons-up"></span>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Cobax</h1>
+            <h2>Plataforma para estudiantes nivel preparatoria</h2>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: rgb(255, 255, 255);"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">¿Qué es Cobax?</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="img/ilustracion2.svg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <br><br><br><br>
+                    <h3><span>✓</span>Plataforma Estudiantil</h3>
+                    <p>Cobax es una plataforma dirijida a los estudiantes de nivel bachillerato y a sus profesores, para
+                        que logren cursas de manera exitosa su etapa durante sus estudios medio superior, logrando así
+                        un alto desempeño en sus clases, adquiriendo conocimiento y cumpliendo con sus obligaciones de
+                        manera remota</p>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Visualización</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="../Multimedia/Imagenes/loginCobax.png" alt="">
+                    </div>
+                    <div class="imagen-port">
+                        <img src="../Multimedia/Imagenes/inicioCobax.png" alt="">
+                    </div>
+                    <div class="imagen-port">
+                        <img src="../Multimedia/Imagenes/calculoCobax.png" alt="">
+                    </div>
+                </div>
+        </section>
+        <section class="clientes contenedor">
+            <h2 class="titulo">Objetivos</h2>
+            <div class="servicio-cont">
+                <div class="servicio-ind">
+                    <img src="img/ilustracion1.svg" alt="">
+                    <h3>Monitoreo</h3>
+                    <p>Buscamos brindarle a los estudiantes de nivel bachillerato una herramienta con la cual pueda ser
+                        capaz de monitorear su progreso académico de una forma más sencilla y en cualquier momento.</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="img/ilustracion4.svg" alt="">
+                    <h3>Cumplimiento Online</h3>
+                    <p>Nos enfocamos en que el alumno logre cumplir con sus actividades académicas, consultar el
+                        material de estudio proporcionado por sus docentes, checar sus calificaciones con respecto a las
+                        materias y al periodo escolar, entre otras cosas de manera remota.</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="img/ilustracion3.svg" alt="">
+                    <h3>Impulsar</h3>
+                    <p>Apoyar a que todos los estudiantes logren recibir su educación media superior sin que necesiten
+                        trasladarse hasta sus instituciones.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h2 class="titulo-final">&copy; Cobax | Equipo #3 | 2°"A" I.C. | UATx</h2>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Página web AlexCG</title>
+    <link rel="shortcut icon" href="img/alexcgdesign.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/AI_EstiloPaginas.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Multimedia/ir_arriba/fonts.css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<script>
+    $(document).ready(function () {
+
+        $('.ir-arriba').click(function () {
+            $('body, html').animate({
+                scrollTop: '0px'
+            }, 300);
+        });
+
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 0) {
+                $('.ir-arriba').slideDown(300);
+            } else {
+                $('.ir-arriba').slideUp(300);
+            }
+        });
+
+    });
+</script>
+<body>
+    <span class="ir-arriba icon-chevrons-up"></span>
+    <header class="extra">
+        <nav>
+            <a href="#">Inicio</a>
+        </nav>
+        <section class="textos-header">
+            <h1>Cobax</h1>
+            <h2>Demostración de la Plataforma</h2>
+        </section>
+    </header>
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Video Explicativo</h2>
+            <div class="contenedor-sobre-nosotros">
+                <div style="text-align: center;">
+                    <iframe width="860" height="515" src="https://www.youtube.com/embed/AKMvJijwS98?disablekb=1"
+                        frameborder="0" controls></iframe>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <h2 class="titulo-final">&copy; Cobax | Equipo #3 | 2°"A" I.C. | UATx</h2>
+    </footer>
+</body>
+
+</html>

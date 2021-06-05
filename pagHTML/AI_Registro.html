@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Multi Step Form with Progress Bar using jQuery and CSS3</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="../CSS/AI_EstiloFormulario.css">
+
+</head>
+
+<body>
+  <!-- partial:index.partial.html -->
+  <!-- multistep form -->
+  <form id="msform" action="action_page.php" method="POST">
+    <!--Al terminar abrirá el formulario para pedir un producto-->
+    <!-- progressbar -->
+    <ul id="progressbar">
+      <!--Encabezados-->
+      <li class="active">Usuario y Contraseña</li>
+      <li>Datos Personales</li>
+      <li>Datos de Residencia</li>
+      <li>Datos de Contacto</li>
+    </ul>
+    <!-- fieldsets -->
+    <!--La mayoría de los valores son requeridos-->
+    <fieldset>
+      <h2 class="fs-title">Usuario y Contraseña</h2>
+      <!--Datos iniciales de registro-->
+      <h3 class="fs-subtitle">Inicio del registro</h3>
+      <input type="text" name="user" placeholder="Nombre de usuario" autofocus required />
+      <input type="text" name="email" placeholder="Correo electrónico" required />
+      <input type="password" name="pass" placeholder="Contraseña" required />
+      <input type="password" name="cpass" placeholder="Confirma tu contraseña" required />
+      <input type="button" name="next" class="next action-button" value="Siguiente" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Datos personales</h2>
+      <!--Datos personales-->
+      <h3 class="fs-subtitle">Información relacionada con tu persona</h3>
+      <input type="text" name="name" placeholder="Nombre(s)" autofocus required />
+      <input type="text" name="apellidos" placeholder="Apellidos" required />
+      <h3 class="fs-extra" style="text-align: left;">Fecha de Nacimiento</h3>
+      <input type="date" name="bday" max="2020-12-31" min="2002-01-01" autocomplete="off" required />
+      <input type="button" name="previous" class="previous action-button" value="Regresar" />
+      <input type="button" name="next" class="next action-button" value="Siguiente" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Datos de Residencia</h2>
+      <!--Ubicación geográfica-->
+      <h3 class="fs-subtitle">Tu ubicación geográfica</h3>
+      <input type="text" name="pais" placeholder="País de residencia" autofocus required />
+      <input type="text" name="estado" placeholder="Estado / Provincia / Distrito" />
+      <input type="text" name="domicilio" placeholder="Domicilio" />
+      <input type="button" name="previous" class="previous action-button" value="Regresar" />
+      <input type="button" name="next" class="next action-button" value="Siguiente" />
+    </fieldset>
+    <fieldset>
+      <h2 class="fs-title">Datos de Contacto</h2>
+      <!--Contacto-->
+      <h3 class="fs-subtitle">Información para contactar contigo</h3>
+      <input type="text" name="noTelefonico" placeholder="Número telefónico" required />
+      <input type="text" name="facebook" placeholder="Facebook" />
+      <textarea name="comentarios" rows="5" cols="0" placeholder="Escribe aquí tus comentarios."></textarea>
+      <input type="button" name="previous" class="previous action-button" value="Regresar" />
+      <input type="submit" name="submit" class="submit action-button" value="Registrar" />
+    </fieldset>
+  </form>
+  <!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'></script>
+  <script src="../JS/AI_scriptFormulario.js"></script>
+
+</body>
+
+</html>
